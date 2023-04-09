@@ -1,0 +1,9 @@
+/* CSS for ChatGptXBlock */
+
+.chatgptxblock_block .count {
+    font-weight: bold;
+}
+
+.chatgptxblock_block p {
+    cursor: pointer;
+}

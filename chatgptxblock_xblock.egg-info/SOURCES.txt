@@ -1,0 +1,13 @@
+setup.py
+chatgptxblock/__init__.py
+chatgptxblock/chatgptxblock.py
+chatgptxblock/static/README.txt
+chatgptxblock/static/css/chatgptxblock.css
+chatgptxblock/static/html/chatgptxblock.html
+chatgptxblock/static/js/src/chatgptxblock.js
+chatgptxblock_xblock.egg-info/PKG-INFO
+chatgptxblock_xblock.egg-info/SOURCES.txt
+chatgptxblock_xblock.egg-info/dependency_links.txt
+chatgptxblock_xblock.egg-info/entry_points.txt
+chatgptxblock_xblock.egg-info/requires.txt
+chatgptxblock_xblock.egg-info/top_level.txt

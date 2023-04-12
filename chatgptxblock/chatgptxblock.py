@@ -103,4 +103,8 @@ class ChatGptXBlock(XBlock, ResourceLoaderMixin, StudioEditableXBlockMixin):
         # Update the chat history with the new message and response
         chat_history = json.loads(self.chat_history)
         chat_history.append({"message": message, "response": response})
-        self.chat_history = json.dumps(chat_history
+        self.chat_history = json.dumps(chat_history)
+
+        # Return the response
+        return utils.json_response({"success": True, "response": response})
+

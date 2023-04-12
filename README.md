@@ -35,6 +35,7 @@ To use the ChatGPT-XBlock in your Open edX course, follow these steps:
 - Configure the XBlock settings, including the prompt text and the API key for the GPT-3.5 API.
 
 - Save the changes and view the course to see the ChatGPT-XBlock in action.
+
 ## Configuration
 
 The ChatGPT-XBlock can be configured using the following settings:
@@ -44,6 +45,7 @@ The ChatGPT-XBlock can be configured using the following settings:
 - max_tokens: The maximum number of tokens that the GPT-3.5 API will generate in response to a prompt.
 - temperature: The "temperature" parameter for the GPT-3.5 API, which controls the "creativity" of the generated responses.
 - top_p: The "top-p" parameter for the GPT-3.5 API, which controls the diversity of the generated responses.
+
 ## Credits
 
 The ChatGPT-XBlock was created by Vishal Bhardwaj and Mohit Aggarwal is released under the MIT License. The XBlock is based on the OpenAI GPT-3.5 API, which is developed by OpenAI and is subject to its own terms and conditions.

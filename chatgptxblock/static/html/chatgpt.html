@@ -1,0 +1,21 @@
+<div class="chatgpt">
+    <div class="chatgpt-header">
+      <h3>{{ display_name }}</h3>
+      <div class="chatgpt-count">{{ chat_count }} Chats</div>
+    </div>
+    <div class="chatgpt-content">
+      <div class="chatgpt-history">
+        {% for message in chat_history %}
+          <div class="chatgpt-message">
+            <div class="chatgpt-user">{{ message.message }}</div>
+            <div class="chatgpt-response">{{ message.response }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="chatgpt-input">
+        <input type="text" placeholder="{{ prompt }}" />
+        <button class="chatgpt-send">Send</button>
+      </div>
+    </div>
+  </div>
+  

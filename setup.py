@@ -1,42 +1,55 @@
-"""Setup for chatgptxblock XBlock."""
-
-
 import os
 
 from setuptools import setup
 
+NAME = "chatgptxblock"
+VERSION = "0.1"
+AUTHOR = "Oppa The Great, Viesse The Destroyer"
+AUTHOR_EMAIL = "s.r.developervishal@gmail.com"
+DESCRIPTION = "A XBlock for chatting with GPT-3."
+KEYWORDS = "xblock chat gpt3"
+URL = "https://github.com/SRDeveloperVishal/ChatGPT-XBlock"
+CLASSIFIERS = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+LICENSE = "Apache 2.0"
+PACKAGES = [NAME]
+INSTALL_REQUIRES = [
+    "XBlock",
+    "xblock-utils>=1.0.7",
+    "requests",
+]
 
-def package_data(pkg, roots):
-    """Generic function to find package_data.
+with open("README.md", "r") as fh:
+    LONG_DESCRIPTION = fh.read()
 
-    All of the files under each of the `roots` will be declared as package
-    data for package `pkg`.
-
-    """
-    data = []
-    for root in roots:
-        for dirname, _, files in os.walk(os.path.join(pkg, root)):
-            for fname in files:
-                data.append(os.path.relpath(os.path.join(dirname, fname), pkg))
-
-    return {pkg: data}
-
+with open("requirements.txt", "r") as fh:
+    REQUIREMENTS = fh.readlines()
 
 setup(
-    name='chatgptxblock-xblock',
-    version='0.1',
-    description='chatgptxblock XBlock',   # TODO: write a better description.
-    license='UNKNOWN',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
-    packages=[
-        'chatgptxblock',
-    ],
-    install_requires=[
-        'XBlock',
-    ],
+    name=NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
+    keywords=KEYWORDS,
+    url=URL,
+    classifiers=CLASSIFIERS,
+    license=LICENSE,
+    author=AUTHOR,
+    author_email=AUTHOR_EMAIL,
+    packages=PACKAGES,
+    include_package_data=True,
+    install_requires=INSTALL_REQUIRES,
     entry_points={
-        'xblock.v1': [
-            'chatgptxblock = chatgptxblock:ChatGptXBlock',
-        ]
+        "xblock.v1": [
+            f"{NAME} = {NAME}.{NAME}:ChatGptXBlock",
+        ],
     },
-    package_data=package_data("chatgptxblock", ["static", "public"]),
 )

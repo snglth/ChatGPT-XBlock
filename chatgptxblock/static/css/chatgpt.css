@@ -1,0 +1,80 @@
+/* Add your custom CSS styles here */
+.chatgpt {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+  }
+  
+  .chatgpt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .chatgpt-header h3 {
+    margin: 0;
+  }
+  
+  .chatgpt-count {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .chatgpt-content {
+    height: 300px;
+    overflow: auto;
+  }
+  
+  .chatgpt-history {
+    margin-bottom: 10px;
+  }
+  
+  .chatgpt-message {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .chatgpt-user {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  
+  .chatgpt-response {
+    background-color: #e6e6e6;
+    color: #666;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  .chatgpt-input {
+    display: flex;
+  }
+  
+  .chatgpt-input input {
+    flex: 1;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .chatgpt-send {
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .chatgpt-send:hover {
+    background-color: #0069d9;
+  }
+  

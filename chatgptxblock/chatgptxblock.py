@@ -6,7 +6,7 @@ from xblock.core import XBlock
 from xblock.fields import Integer, String, Scope
 from xblock.fragment import Fragment
 
-from xblockutils.resources import ResourceLoaderMixin
+from xblockutils.resources import ResourceLoader
 from xblockutils.studio_editable import StudioEditableXBlockMixin
 
 
@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 
 
 # Define the ChatGptXBlock class
-class ChatGptXBlock(XBlock, ResourceLoaderMixin, StudioEditableXBlockMixin):
+class ChatGptXBlock(XBlock, ResourceLoader, StudioEditableXBlockMixin):
     # Define the fields for the XBlock
     display_name = String(
         display_name="Display Name",
